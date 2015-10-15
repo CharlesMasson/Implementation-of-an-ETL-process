@@ -31,7 +31,7 @@ The query to be optimized creates a hypercube from three tables:
  Column      |     Type      |        Modifiers
 -------------+---------------+-------------------------
  id          | integer       | not null >= 1
- contract    | integer       | >= 1
+ contract    | integer       | not null >= 1
  time        | integer       | not null [1,36]
  amount      | numeric(10,2) | not null
  consumption | numeric(9,0)  | not null
