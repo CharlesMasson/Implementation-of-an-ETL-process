@@ -2,7 +2,7 @@
 
 This is a course project whose purpose is to optimize by any means a specific processing of some data (see SQL statement below).
 
-I wrote a Java multi-threaded implementation of the query that runs about 35-50 times faster than the SQL statement with PostgreSQL depending on the machine (tested on a 4-core computer and on a 32-core server, see Performance results section below). I did not use any Java data structure for the core processing given their poor performance so that the code would be easily transposable to C code for better performances (about 1.5 time faster).
+I wrote a Java multi-threaded implementation of the query that runs about 35-50 times faster than the execution with PostgreSQL depending on the machine (tested on a 4-core computer and on a 32-core server, see Performance results section below). I did not use any Java data structure for the core processing given their poor performance so that the code would be easily transposable to C code for better performances (about 1.5 time faster).
 
 ## SQL query
 The query to be optimized creates a hypercube from three tables:
