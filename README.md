@@ -55,7 +55,7 @@ JOIN invoices AS i ON i.contrat = k.id
 GROUP BY type, geo, misc, nature, time;
 ```
 
-## Running the Java file
+## Running the process
 Once the Java file is compiled, run it as follows:
 ```
 java ETL data_folder output_file [-n nb_threads] [-p nb_thread_pools] [-s chunk_size] [-l log_type]
