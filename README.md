@@ -71,7 +71,7 @@ where:
 * *log_type* defines the type of ouput log: 0 for detailed log (default), 1 for compact log, 2 for no log.
 
 ## Performance results
-Machine specs: Intel Core i7-3610QM @ 2.30GHz (4 cores, 8 logical cores), 8GB RAM DDR3 @ 1600Mhz, SSD storage.
+Test machine specs: Intel Core i7-3610QM @ 2.30GHz (4 cores, 8 logical cores), 8GB RAM DDR3 @ 1600Mhz, SSD storage.
 
 Input data: 1M clients, 1.6M contracts, 57.6M invoices.
 
@@ -82,6 +82,8 @@ Here are the execution times:
 
 PostgreSQL does not make the most of multi-core machines as it processes the data with only one thread.
 
-Here is the evolution of the processing rate depending on the number of threads. As expected, we can see a stabilization above 8 threads (on an octo-core machine).
+Here is the evolution of the processing rate depending on the number of threads. As expected, on the test machine, we can see a stabilization above 8 threads.
 
 ![Processing rate](Processing-rate.PNG?raw=true "Processing rate depending on the number of threads")
+
+As the processing load (transform phase) is quite light compared to the input reading (extract phase), the performances are mainly limited by I/O.
