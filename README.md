@@ -84,4 +84,4 @@ PostgreSQL does not make the most of multi-core machines as it processes the dat
 
 Here is the evolution of the processing rate depending on the number of threads. As expected, we can see a stabilization above 8 threads (on an octo-core machine).
 
-![Alt text](Processing rate.png?raw=true "Processing rate depending on the number of threads")
+![Alt text](Processing-rate.png?raw=true "Processing rate depending on the number of threads")
