@@ -11,18 +11,18 @@ The query to be optimized creates a hypercube from three tables:
 ```
  Column |  Type   |       Modifiers
 --------+---------+------------------------
- id     | integer | not null
- type   | integer | not null
- geo    | integer | not null
- misc   | integer | not null
+ id     | integer | not null >= 1
+ type   | integer | not null [1,5]
+ geo    | integer | not null [1,578]
+ misc   | integer | not null [1,6]
 ```
 * Contracts
 ```
  Column |  Type   |        Modifiers
 --------+---------+-------------------------
- id     | integer | not null
- client | integer | not null
- nature | integer | not null
+ id     | integer | not null >= 1
+ client | integer | not null >= 1
+ nature | integer | not null [1,5]
  start  | integer | not null default 201410
  end    | integer |
 ```
@@ -30,9 +30,9 @@ The query to be optimized creates a hypercube from three tables:
 ```
  Column      |     Type      |        Modifiers
 -------------+---------------+-------------------------
- id          | integer       | not null
- contract    | integer       |
- time        | integer       |
+ id          | integer       | not null >= 1
+ contract    | integer       | >= 1
+ time        | integer       | not null [1,36]
  amount      | numeric(10,2) | not null
  consumption | numeric(9,0)  | not null
 ```
